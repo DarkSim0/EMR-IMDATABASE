@@ -24,8 +24,10 @@ use Carbon\Carbon;
 
 use App\UserRights;
 
-use Auth;
+use App\TransType;
 
+use Auth;
+use Illuminate\Support\Facades\Response;
 
 class AdmissionController extends Controller
 {
@@ -44,14 +46,23 @@ class AdmissionController extends Controller
     	return view('admission.index',compact('result','search','admit'));
     }
 
-    public function selectForm($id)
+    public function selectForm($id, Request $req)
     {
         $patient = Admission::find($id);
         $uname = Auth::user()->uname;
         $service = DB::table('user_rights')->where('Uname', '=' , $uname )->get();
-
-        return view('admission.select',compact('patient','service'));
+        
+        $trans = $req->input('transact');
+        $sample = DB::table('trans_types')->where('department','=', $trans)->where('Status', '=', 'A')->get();
+    
+        return view('admission.select',compact('patient','service','sample'));
+           
+    
     }
+         
+
+      
+   
 
     public function view($id)
     {

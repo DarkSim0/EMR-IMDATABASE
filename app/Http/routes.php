@@ -40,3 +40,4 @@ Route::get('/admissions/view/print/{id}','PdfController@index');
 Route::get('/admissions/select/{id}','AdmissionController@selectForm');
 
 
+
