@@ -48,5 +48,9 @@
     },
     "config": {
         "preferred-install": "dist"
+    },
+    "dependencies":{
+        "loadash": ">=4.17.13"
     }
+    
 }
