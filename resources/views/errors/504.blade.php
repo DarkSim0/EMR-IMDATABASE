@@ -16,7 +16,6 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" />
 </head>
-
 <body>
   <div class="container-scroller">
     <div class="container-fluid page-body-wrapper full-page-wrapper auth-page">
@@ -34,7 +33,7 @@
             </div>
             <div class="row mt-5">
               <div class="col-12 text-center mt-xl-2">
-                <a class="text-white font-weight-medium" href="{{url('/')}}">Back to home</a>
+                <a class="text-white font-weight-medium btn btn-info" href="{{url('/')}}">Back to home</a>
               </div>
             </div>
             <div class="row mt-5">
