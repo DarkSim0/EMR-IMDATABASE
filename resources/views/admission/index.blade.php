@@ -49,7 +49,9 @@
 			<div class="table-responsive">
 
 					<div class="form-group" style="margin-top: 20px; " >
-							{{ $result->links() }}
+						@if($errors->any())
+							<h4 class="card-title text-danger" >{{$errors->first()}}</h4>
+						@endif
 					</div>		
 				
 				<table class="table table-stripped">
