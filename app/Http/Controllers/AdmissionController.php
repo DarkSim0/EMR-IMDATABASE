@@ -90,40 +90,50 @@ class AdmissionController extends Controller
 
     public function store(Request $req, $id)
     {
+        $adm = DB::table('admissions')->where('Hospnum', '=' , $id)->get();
+        
+        if( $adm > 0 )
+        {
+            return redirect('admissions')->withErrors(['Patient Already admitted']);
+        }
+        else{
+            $enrolled = Admission::find($id);
+            // $this->validate($req,[
+            //     'lname' => 'required|max:255',
+            //     'fname' => 'required|max:255',
+            //     'mname' => 'required|max:255',
+            //     'gender' =>'required',
+            //     'birthdate' =>'required', 
+            //     'age' => 'required',
+            //     'address' =>'required|max:500', 
+            //     'cs' => 'required',
+            //     'roomNo' => 'required|email',
+            //     'hospitalNo' => 'required|max:255|n',
+            //     'religion' => 'required'
+            // ]);
+            //Eloquent
+            $patient = new Admission;
+            $patient->lname = $req->lname;
+            $patient->fname = $req->fname;
+            $patient->mname = $req->mname;
+            $patient->sex = $req->sex;
+            $patient->birthdate = $req->birthdate;
+            $patient->age = $req->age;
+            $patient->address = $req->address;
+            $patient->cs = $req->cs;
+            $patient->Hospnum = $req->Hospnum;
+            $patient->religion = $req->religion;
+            $patient->contactnum = $req->contactnum;
+            $patient->createdBy = $req->createdBy;
+            $patient->save();
 
-        $enrolled = Admission::find($id);
-        // $this->validate($req,[
-        //     'lname' => 'required|max:255',
-        //     'fname' => 'required|max:255',
-        //     'mname' => 'required|max:255',
-        //     'gender' =>'required',
-        //     'birthdate' =>'required', 
-        //     'age' => 'required',
-        //     'address' =>'required|max:500', 
-        //     'cs' => 'required',
-        //     'roomNo' => 'required|email',
-        //     'hospitalNo' => 'required|max:255|n',
-        //     'religion' => 'required'
-        // ]);
-        //Eloquent
-        $patient = new Admission;
-        $patient->lname = $req->lname;
-        $patient->fname = $req->fname;
-        $patient->mname = $req->mname;
-        $patient->sex = $req->sex;
-        $patient->birthdate = $req->birthdate;
-        $patient->age = $req->age;
-        $patient->address = $req->address;
-        $patient->cs = $req->cs;
-        $patient->Hospnum = $req->Hospnum;
-        $patient->religion = $req->religion;
-        $patient->contactnum = $req->contactnum;
-        $patient->createdBy = $req->createdBy;
-        $patient->save();
+            Session::flash('success','Patient Successfully Admitted');
 
-        Session::flash('success','Patient Successfully Admitted');
+            return redirect('admissions');
+        }
+       
 
-        return redirect('admissions');
+      
 
     }
     public function admit(Request $req)
