@@ -76,7 +76,7 @@
                 </div>
                 <div class="form-group{{ $errors->has('userlevel') ? ' has-error' : '' }}">
                   <div class="input-group">
-                    <input type="text" class="form-control" name="userlevel" value="{{old('userlevel')}}" autocomplete="off" >
+                    <input type="text" class="form-control" name="userlevel" value="{{old('userlevel')}}" autocomplete="off" placeholder="user leve" >
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <i class="mdi mdi-check-circle-outline"></i>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="form-group{{ $errors->has('doctorID') ? ' has-error' : '' }}">
                   <div class="input-group">
-                    <input type="text" class="form-control" name="doctorID" value="{{old('doctorID')}}" placeholder="Name" autocomplete="off" >
+                    <input type="text" class="form-control" name="doctorID" value="{{old('doctorID')}}" placeholder="doctorID" autocomplete="off" >
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <i class="mdi mdi-check-circle-outline"></i>
@@ -106,7 +106,7 @@
                 </div>
                 <div class="form-group{{ $errors->has('addedBy') ? ' has-error' : '' }}">
                   <div class="input-group">
-                    <input type="text" class="form-control" name="addedBy" value="{{Auth::user()->lname}}" autocomplete="off" >
+                    <input type="text" class="form-control" name="addedby" value="" autocomplete="off" placeholder="added by" >
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <i class="mdi mdi-check-circle-outline"></i>

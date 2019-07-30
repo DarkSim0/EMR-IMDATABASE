@@ -22,5 +22,6 @@ class Admission extends Model
                     ->orWhere('Hospnum','LIKE', $search.'%');              
     }
 
+    
 
 }

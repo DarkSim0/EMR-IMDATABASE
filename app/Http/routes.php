@@ -27,7 +27,7 @@ Route::get('/admissions', ['as' => 'admit', 'uses' => 'AdmissionController@index
 
 Route::get('/admissions/view/{id}',['as'=>'admithistory','uses'=> 'AdmissionController@view' ]);
 
-Route::post('/admissions/view/{id}','AdmissionController@admit');
+Route::post('/transtype/view/{id}','AdmissionController@admit');
 
 Route::get('/admissions/create/{id}','AdmissionController@create');
 
@@ -38,6 +38,10 @@ Route::get('/admissions/search','PatientController@search');
 Route::get('/admissions/view/print/{id}','PdfController@index');
 
 Route::get('/admissions/select/{id}','AdmissionController@selectForm');
+
+Route::get('/prognoteim','ProgressnotesController@index');
+
+Route::post('/prognoteim','ProgressnotesController@store');
 
 
 

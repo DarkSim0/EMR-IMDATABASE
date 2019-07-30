@@ -14,7 +14,7 @@ class CreateAdmissionsTable extends Migration
     {
         Schema::create('admissions', function (Blueprint $table) {
             $table->increments('Healthnum');
-            $table->string('Hospnum');
+            $table->string('Hospnum')->unique();
             $table->string('lname');
             $table->string('fname');
             $table->string('mname');

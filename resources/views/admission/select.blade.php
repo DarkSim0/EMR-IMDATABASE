@@ -1,6 +1,6 @@
 @extends('templates.main')
 
-@section('title', '| Patient-Info')
+@section('title', '| Select')
 
 @section('navbar')
 
@@ -48,7 +48,7 @@
                     @foreach($sample as $samp)
                     <tr>
                             <td>{{$samp->Transtype}}</td>   
-                            <td><a href="#" class="btn btn-info" >Select</a></td>
+                            <td><a href="{{url('/'.$samp->TransLink)}}" class="btn btn-info" >Select</a></td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -56,6 +56,14 @@
         </div>
     </div>
 </div>    
+
+
+
+
+@endsection
+
+@section('scripts')
+
 
 
 @endsection

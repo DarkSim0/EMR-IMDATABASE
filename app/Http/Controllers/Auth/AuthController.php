@@ -58,7 +58,7 @@ class AuthController extends Controller
             'userlevel' => 'required|max:20',
             'doctorID' => 'required|max:50',
             'email' => 'required|email|max:255|unique:users',
-            'addedBy' => 'required|max:50',
+            'addedby' => 'required|max:50',
             'password' => 'required|min:6|confirmed',
         ]);
     }

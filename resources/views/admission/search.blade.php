@@ -68,7 +68,6 @@
 					</thead>
 
 					<tbody>
-
 						@foreach( $result as $r )
 							<tr>
 									<td>

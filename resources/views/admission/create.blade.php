@@ -10,6 +10,21 @@
 
 @section('content')
 
+@if (session('error'))
+   <div class="row purchace-popup{{ $errors->has('email') ? ' has-error' : '' }}">
+		<div class="col-md-12 grid-margin">
+		  <span class="d-block d-md-flex align-items-center">
+		 	<strong class=" text-warning" >Warning:</strong>
+
+		 	&nbsp&nbsp <small class="designation text-danger" >This Patient is already registered</small> 
+		 	<h6 class="ml-auto mt-4 mt-md-0" ></h6>
+
+		    <i class="mdi mdi-close popup-dismiss d-none d-md-block"></i>
+		  </span>
+		</div>
+    </div>
+@endif
+
 <div class="col-lg-12 grid-margin stretch-card">
 	
 		<div class="card">
@@ -28,7 +43,7 @@
 							
 								<label class="card-description">Hospital No</label>
 			
-								<input type="text" name="Hospnum" class="form-control" value="{{$master->HospNum}}" placeholder="000000" >
+								<input type="text" name="Hospnum" class="form-control" value="{{$master->HospNum}}" placeholder="000000" readonly>
 								@if($errors->has('hospitalNo'))
 								   <p class="text-danger">Hospital Number is required</p>
 								@endif
@@ -46,7 +61,7 @@
 								
 								<label class="card-description">Last Name</label>
 
-								<input type="text" name="lname"  class="form-control" value="{{$master->LastName}}" placeholder="Last Name"  >
+								<input type="text" name="lname"  class="form-control" value="{{$master->LastName}}" placeholder="Last Name" readonly>
 								@if($errors->has('lname'))
 								   <p class="text-danger">Last Name is required</p>
 								@endif
@@ -60,7 +75,7 @@
 								
 								<label class="card-description">First Name</label>
 
-								<input type="text" name="fname" class="form-control" value="{{$master->FirstName}}" placeholder="First Name"  >
+								<input type="text" name="fname" class="form-control" value="{{$master->FirstName}}" placeholder="First Name"  readonly>
 								@if($errors->has('fname'))
 								   <p class="text-danger">First Name is required</p>
 								@endif
@@ -74,7 +89,7 @@
 								
 								<label class="card-description">Middle Name</label>
 
-								<input type="text" name="mname" class="form-control" value="{{$master->MiddleName}}" placeholder="Middle Name"  >
+								<input type="text" name="mname" class="form-control" value="{{$master->MiddleName}}" placeholder="Middle Name"  readonly>
 								@if($errors->has('mname'))
 								   <p class="text-danger">Middle Name is required</p>
 								@endif
@@ -92,7 +107,7 @@
 								
 								<label class="card-description">Date of Birth</label>
 
-								<input type="text" name="birthdate" value="{{$master->BirthDate}}" class="form-control" placeholder="mm/dd/yyyy" >
+								<input type="text" name="birthdate" value="{{$master->BirthDate}}" class="form-control" placeholder="mm/dd/yyyy" readonly>
 								@if($errors->has('birthdate'))
 								   <p class="text-danger">Date of Birth is required</p>
 								@endif
@@ -106,7 +121,7 @@
 								
 								<label class="card-description">Age</label>
 
-								<input type="text" name="age" value="{{$master->Age}}" class="form-control"  >
+								<input type="text" name="age" value="{{$master->Age}}" class="form-control"  readonly>
 								@if($errors->has('hospitalNo'))
 								   <p class="text-danger">Age is required</p>
 								@endif
@@ -120,7 +135,7 @@
 								
 								<label class="card-description">Address</label>
 
-								<input type="text" name="address" value="{{$master->HouseStreet}}" class="form-control" placeholder="Enter complete home address" >
+								<input type="text" name="address" value="{{$master->HouseStreet}}" class="form-control" placeholder="Enter complete home address" readonly>
 								@if($errors->has('address'))
 								   <p class="text-danger">Age is required</p>
 								@endif
@@ -148,20 +163,8 @@
 
 									?>"
 									class="form-control" 
-									 >
+									 readonly>
 						
-							</div>
-
-						</div>
-
-						<div class="col-md-2">
-							
-							<div class="form-group">
-								
-								<label class="card-description">Contact Number</label>
-
-								<input type="text" name="contactnum" value="{{$master->TelNum}}" class="form-control" placeholder="09XXXXXXXXX" >
-
 							</div>
 
 						</div>
@@ -178,7 +181,7 @@
 					                @elseif($master->CivilStatus=='3') Widow/er
 					                @elseif($master->CivilStatus=='4') Separated
 					                @else Divorced
-					                @endif" class="form-control">
+					                @endif" class="form-control" readonly>
 							</div>
 
 						</div>
@@ -214,7 +217,7 @@
 					<!-- <input type="hidden" name="admissionNo" value="{{$date->format('Ymd')}}"> -->
 
 					<input type="hidden" value="{{Auth::user()->id}}" name="createdBy"  >
-
+				
 					<button type="submit" class="btn btn-primary btn-fw">Save</button>
 
 				</form>
