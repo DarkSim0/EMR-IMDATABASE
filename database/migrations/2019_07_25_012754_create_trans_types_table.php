@@ -17,6 +17,7 @@ class CreateTransTypesTable extends Migration
             $table->string('Transtype');
             $table->string('Status');
             $table->string('department');
+            $table->string('TransLink')->unique();
             $table->timestamps();
         });
     }

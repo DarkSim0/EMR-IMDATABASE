@@ -57,8 +57,8 @@
   </div>
   <!-- container-scroller -->
   <!-- plugins:js -->
-  <script src="{{asset('vendor/js/vendor.bundle.base.js')}}"></script>
-  <script src="{{asset('vendor/js/vendor.bundle.addons.js')}}"></script>
+  <script src="{{asset('assets/js/vendor.bundle.base.js')}}"></script>
+  <script src="{{asset('assets/js/vendor.bundle.addons.js')}}"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->
   <!-- End plugin js for this page-->

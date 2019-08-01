@@ -2,6 +2,13 @@
 
 @section('title', '| Select')
 
+@section('style')
+
+<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+
+
+@endsection
+
 @section('navbar')
 
 @include('templates.nav')
@@ -48,7 +55,7 @@
                     @foreach($sample as $samp)
                     <tr>
                             <td>{{$samp->Transtype}}</td>   
-                            <td><a href="{{url('/'.$samp->TransLink)}}" class="btn btn-info" >Select</a></td>
+                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#{{$samp->TransLink}}" >ADD</button></td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -57,13 +64,32 @@
     </div>
 </div>    
 
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Transactions</th>
+                        <th>Encoded By</th>
+                        <th>Date Created</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($transview as $tv)
+                    <tr>
+                        <td>{{$tv->TransTypeName}}</td>
+                        <td>{{$tv->EncodedBy}}</td>
+                        <td>{{$tv->created_at->diffForHumans()}}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
-
-
-@endsection
-
-@section('scripts')
-
+@include('progressnotes.index')
 
 
 @endsection

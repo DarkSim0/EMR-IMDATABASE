@@ -17,7 +17,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('TransType');
             $table->string('TransTypeName');
             $table->string('EncodedBy');
-            $table->string('Healthnum');
+            $table->string('Healthno');
             $table->integer('Status');
             $table->timestamps();
         });

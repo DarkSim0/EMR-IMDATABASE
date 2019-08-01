@@ -26,6 +26,8 @@ use App\UserRights;
 
 use App\TransType;
 
+use App\Transaction;
+
 use Auth;
 use Illuminate\Support\Facades\Response;
 
@@ -54,8 +56,9 @@ class AdmissionController extends Controller
         
         $trans = $req->input('transact');
         $sample = DB::table('trans_types')->where('department','=', $trans)->where('Status', '=', 'A')->get();
-    
-        return view('admission.select',compact('patient','service','sample'));
+        $transview = Transaction::where('Healthno','=',$id)->get();
+
+        return view('admission.select',compact('patient','service','sample','transview'));
     }
          
 
