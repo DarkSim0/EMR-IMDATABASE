@@ -1,4 +1,5 @@
-<div class="modal fade" id="prognoteim" role="dialog" > 
+
+<div class="modal fade bd-example-modal-lg" id="prognoteim" role="dialog" aria-hidden="true"> 
     <div class="modal-dialog" >
         <div class="modal-content">
          <div class="modal-header">
@@ -17,7 +18,7 @@
                 <div class="form-group">
                     
                     <label>Subjective</label>
-                    <textarea name="Subjective" rows="10" class="form-control" ></textarea>
+                    <input type="text" name="Subjective" rows="10" class="form-control" >
                 </div>
                 <div class="form-group">
                     <label>Objectives</label>
@@ -40,15 +41,18 @@
                     <textarea name="PxOutcome" rows="10" class="form-control"></textarea>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button class="btn btn-danger" data-dismiss="modal" >Close</button>
-                <input class="btn btn-primary" id="action"  type="submit" value="add" >
-            </div>
+
             <input type="hidden" name="Healthno" value="{{$patient->Healthnum}}" >
-                <input type="hidden" name="TransTypeName" value="PROGRESS NOTES" >
-                <input type="hidden" name="EncodedBy" value="{{ Auth::user()->uname }}" >
-                <input type="hidden" name="TransType" value="2" >
-                <input type="hidden" name="Status" value="1" >
+            <input type="hidden" name="TransTypeName" value="PROGRESS NOTES" >
+            <input type="hidden" name="EncodedBy" value="{{ Auth::user()->uname }}" >
+            <input type="hidden" name="TransType" value="2" >
+            <input type="hidden" name="Status" value="1" >
+
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal" >CLOSE</button>
+                <input class="btn btn-primary" id="action"  type="submit" value="ADD" >
+            </div>
+          
         </form>   
         </div>
     </div>
@@ -81,28 +85,6 @@
             });
         });
     });
-
-    //  $(document).ready(function() {
-
-    //     $('#storenote').on('submit',function(e){
-    //         e.preventDefault();
-            
-    //         $.ajax({
-    //             method:"POST",
-    //             url:"/progStore",
-    //             data: $('#storenote').serialize(),
-    //             success: function (response) {
-    //                 console.log(response)
-    //                 $('#prognoteim').modal('hide')
-    //                 alert("Data Saved");
-    //             },
-    //             error: function(error){
-    //                 console.log(error)
-    //                 alert("Data Not Saved");
-    //             }
-    //         });
-    //     });
-    // });
 </script>
 
 @endsection

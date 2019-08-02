@@ -12,6 +12,8 @@ use Session;
 
 use DB;
 
+use Validator;
+
 use App\Admission;
 
 use App\AdmittingHistory;
@@ -29,6 +31,7 @@ use App\TransType;
 use App\Transaction;
 
 use Auth;
+
 use Illuminate\Support\Facades\Response;
 
 class AdmissionController extends Controller
@@ -51,19 +54,17 @@ class AdmissionController extends Controller
     public function selectForm($id, Request $req)
     {
         $patient = Admission::find($id);
+       
         $uname = Auth::user()->uname;
+       
         $service = DB::table('user_rights')->where('Uname', '=' , $uname )->get();
-        
+       
         $trans = $req->input('transact');
+       
         $sample = DB::table('trans_types')->where('department','=', $trans)->where('Status', '=', 'A')->get();
-        $transview = Transaction::where('Healthno','=',$id)->get();
-
-        return view('admission.select',compact('patient','service','sample','transview'));
-    }
-         
-
       
-   
+        return view('admission.select',compact('patient','service','sample'));
+    }
 
     public function view($id)
     {
@@ -76,7 +77,6 @@ class AdmissionController extends Controller
     	
     }
 
-
     public function create($id)
     {
 
@@ -87,8 +87,6 @@ class AdmissionController extends Controller
         return view('admission.create',compact('master','date')); 
 
     }
-
-
 
     public function store(Request $req, $id)
     {
@@ -129,9 +127,7 @@ class AdmissionController extends Controller
         catch(\Illuminate\Database\QueryException $ex)
         {
             return back()->withError($ex->getMessage())->withInput();
-        }
-                
-           
+        }       
 
     }
     public function admit(Request $req)

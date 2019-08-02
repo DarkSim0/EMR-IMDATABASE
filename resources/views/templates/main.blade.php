@@ -8,9 +8,9 @@
   <title>Health Checkup @yield('title')</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{asset('assets/css/materialdesignicons.min.css')}}">
-  <link rel="stylesheet" href="{{asset('vendor/css/vendor.bundle.base.css')}}">
-  <link rel="stylesheet" href="{{asset('vendor/css/vendor.bundle.addons.css')}}">
-   <link rel="stylesheet" href="{{asset('assets/css/fontawesome-free/css/all.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/css/vendor.bundle.base.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/css/vendor.bundle.addons.css')}}">
+   <link rel="stylesheet" href="{{asset('assets/css/fontawesome-free/css/fontawesome.min.css')}}">
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
@@ -41,7 +41,7 @@
         <footer class="footer">
           <div class="container-fluid clearfix">
             <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018
-              <a href="#" target="_blank">Manuel Simeon</a>. All rights reserved.</span>
+              <a href="#" >Manuel Simeon</a>. All rights reserved.</span>
             <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with
               <i class="mdi mdi-heart text-danger"></i>
             </span>
