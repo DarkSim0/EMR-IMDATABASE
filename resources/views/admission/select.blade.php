@@ -13,7 +13,7 @@
 <div class="col-lg-12 grid-margin stretch-card">
 	<div class="card">
 		<div class="card-body">
-			<h3 class=" text-primary">Select clinic</h3>
+			<h3 class=" text-primary">Patient Demographics</h3>
 		</div>
 		@include('templates.demograph')
 	</div>
@@ -21,47 +21,66 @@
 <div class="col-lg-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
-            <form method="get" class="form-control">
-                <select name="transact" >
-                    @foreach($service  as $s)
-                        <option value="{{$s->Clinic}}">{{$s->Clinic}}</option>   
-                    @endforeach 
-                    
-                </select>
-                <button type="submit" value="Continue" class="btn btn-primary" >CONTINTUE</button>
-            </form>
+            <h3 class="text-info">Select Service</h3>   
+            <br>
+            @foreach($service  as $s)
+                <a href="{{url('/'.$s->Clinic.'/'.$patient->Healthnum)}}" class="btn btn-outline-secondary" >{{$s->Clinic}}</a>           
+            @endforeach 
         </div>
     </div>
 </div>
 
 <div class="col-lg-12 grid-margin stretch-card">
     <div class="card">
+       
+            <div class="card-body">
+                <table class="table" >
+                    <thead>
+                        <tr>
+                            <th>Forms</th>
+                            <th>Service</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($sample as $samp)
+                        <tr>
+                                <td>{{$samp->Transtype}}</td>   
+                                <td>{{$samp->department}}</td>
+                                <td><button type="submit" class="btn btn-info"   name="selectTrans" value="{{$samp->id}}" >SELECT</button></td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+       
+    </div>
+</div>  
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
         <div class="card-body">
-            <table class="table" >
+            <table class="table">
                 <thead>
                     <tr>
-                        <th>Forms</th>
-                        <th>Service</th>
-                        <th>Action</th>
+                        <td>Transaction Type</td>
+                        <td>Encoded by</td>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($sample as $samp)
+                   @foreach($transaction as  $transy ) 
                     <tr>
-                            <td>{{$samp->Transtype}}</td>   
-                            <td>{{$samp->department}}</td>
-                            <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#{{$samp->TransLink}}" >ADD</button></td>
+                        <td>{{$transy->TransTypeName}}</td>
+                        <td>{{$transy->EncodedBy}}</td>
                     </tr>
-                    @endforeach
+                   @endforeach
                 </tbody>
-            </table>  
+            </table>
         </div>
     </div>
-</div>    
-
-
-
-@include('progressnotes.index')
+</div>
 
 
 @endsection
+

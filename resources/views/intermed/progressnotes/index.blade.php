@@ -43,8 +43,7 @@
             </div>
 
             <input type="hidden" name="Healthno" value="{{$patient->Healthnum}}" >
-            <input type="hidden" name="TransTypeName" value="PROGRESS NOTES" >
-            <input type="hidden" name="EncodedBy" value="{{ Auth::user()->uname }}" >
+
             <input type="hidden" name="TransType" value="2" >
             <input type="hidden" name="Status" value="1" >
 
@@ -59,32 +58,3 @@
 </div> 
 
 
-@section('scripts')
-
-
-
-<script>
-    $(document).ready(function() {
-
-        $('#storenote').on('submit',function(e){
-            e.preventDefault();
-            
-            $.ajax({
-                method:"POST",
-                url:"{{route('store.note')}}",
-                data: $('#storenote').serialize(),
-                success: function (response) {
-                    console.log(response)
-                    $('#prognoteim').modal('hide')
-                    alert("Data Saved");
-                },
-                error: function(error){
-                    console.log(error)
-                    alert("Data Not Saved");
-                }
-            });
-        });
-    });
-</script>
-
-@endsection

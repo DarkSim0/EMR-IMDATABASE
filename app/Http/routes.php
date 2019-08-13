@@ -39,8 +39,7 @@ Route::get('/admissions/view/print/{id}','PdfController@index');
 
 Route::get('/admissions/select/{id}','AdmissionController@selectForm');
 
-// Route::get('/progress/{link}',['as'=>'prognote.single', 'uses'=>'ProgressnotesController@getSlug'])->where('link','[\w\d\-\_\]+');
-
+Route::get('/IM/{id}','InterMedController@index');
 
 Route::post('/progStore', ['as' => 'store.note', 'uses' => 'ProgressnotesController@store']);
 

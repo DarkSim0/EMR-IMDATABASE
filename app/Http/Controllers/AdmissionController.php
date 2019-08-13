@@ -34,6 +34,7 @@ use Auth;
 
 use Illuminate\Support\Facades\Response;
 
+
 class AdmissionController extends Controller
 {
 
@@ -60,11 +61,19 @@ class AdmissionController extends Controller
         $service = DB::table('user_rights')->where('Uname', '=' , $uname )->get();
        
         $trans = $req->input('transact');
+
+        $sel = $req->input('selectTrans');
+
+        $transaction = DB::table('transactions')->where('TransType','=',$sel)->where('EncodedBy','=',$uname)->where('Healthno','=',$id)->get();//and encoded by is == user log in 
        
         $sample = DB::table('trans_types')->where('department','=', $trans)->where('Status', '=', 'A')->get();
-      
-        return view('admission.select',compact('patient','service','sample'));
+
+        $forms = DB::table('progress_notes')->where('Healthnum','=',$id)->get();
+
+        return view('admission.select',compact('patient','service','sample','transaction'));
     }
+
+
 
     public function view($id)
     {
