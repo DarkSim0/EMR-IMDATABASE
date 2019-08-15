@@ -70,7 +70,7 @@ class ProgressnotesController extends Controller
         $transac = array(
             'TransType' => $req->TransType,
             'TransTypeName' => "PROGRESS NOTES",
-            'EncodedBy' => "Auth::user()->uname",
+            'EncodedBy' => $req->EncodedBy,
             'Healthno' => $req->Healthno,
             'Status' => $req->Status
            
@@ -79,5 +79,5 @@ class ProgressnotesController extends Controller
         ProgressNotes::create($prognote);        
 
     }
-            
+
 }

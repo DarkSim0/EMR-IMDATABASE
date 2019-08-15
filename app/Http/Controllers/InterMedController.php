@@ -45,20 +45,19 @@ class InterMedController extends Controller
 
     public function index($id)
     {   
-        try{
+        try
+        {
             $uname = Auth::user()->uname;
         }
         catch(\Exception $e)
         {
             dd($e);
-        }
-            
-  
-       
-      
+        } 
+         
 
         $service = UserRights::where('Uname','=',$uname)->Where('Clinic','=','IM')->get();
-        foreach($service as $se){
+        foreach($service as $se)
+        {
             if($se->Clinic == 'IM')
             {
                 $patient = Admission::find($id);
