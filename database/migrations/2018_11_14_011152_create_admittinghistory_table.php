@@ -15,7 +15,7 @@ class CreateAdmittinghistoryTable extends Migration
     {
         Schema::create('admittinghistory', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('admittingHistoryNo')->unique();
+            $table->string('admittingHistoryNo');
             $table->string('attendingPhysician')->nullable();
             $table->string('attendingPhysicianOther')->nullable();
             $table->string('dateAdmit')->nullable();

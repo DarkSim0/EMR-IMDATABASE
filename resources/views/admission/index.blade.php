@@ -85,11 +85,9 @@
 						@foreach( $result as $r )
 							<tr>
 								<td>
-									@if($r->AdmitHisto['admittingHistoryNo'] > 0)
-									<a href="#" class="btn btn-outline-primary btn-sm" >View</a>	
-									@else
+							
 									<a href="{{ url('admissions/select/'.$r->Healthnum) }}" class="btn btn-outline-warning btn-sm" >Select</a>
-									@endif
+								
 								</td>
 								<td class="py-1" >
 							@if($r->gender=='M'||$r->gender=='Male')

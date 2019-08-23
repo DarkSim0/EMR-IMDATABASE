@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProgressNotes extends Model
 {
+   
     protected $fillable = [
         'Healthnum',
         'Idnum',

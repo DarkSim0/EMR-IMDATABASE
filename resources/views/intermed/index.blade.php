@@ -52,6 +52,25 @@
             <div class="card-body">
                 <div class="form-group col-md-12" >
                     <label class="card-title">Admitting History and Physical Examination</label>
+                    <span class="float-right"  ><a class="btn btn-primary" href="{{url('IM/admittinghistory/'.$patient->Healthnum)}}">New +</a></span> 
+                    <table class="table" >
+                        <thead>
+                            <tr>
+                                <th>Chief Complaint</th>
+                                <th>Attending Physician</th>
+                                <th>Date Created</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                     
+                            <tr>
+                                <td>sample 1</td>
+                                <td>sample 2</td>
+                                <td>sample 3</td>
+                            </tr>
+                           
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -62,7 +81,24 @@
         <div class="card">
             <div class="card-body">
                 <div class="form-group col-md-12" >
-                    <label class="card-title">Progress notes </label><span class="float-right"  ><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#prognoteim" >New +</button></span> 
+                    <label class="card-title">Progress notes </label>
+                    <span class="float-right" ><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#prognoteim" >New +</button></span> 
+                    <table class="table" >
+                        <thead>
+                            <tr>
+                                <th>Subjective</th>
+                                <th>Date Created</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($notes as $n)
+                            <tr>
+                                <td>{{$n->Subjective}}</td>
+                                <td>{{$n->created_at}}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -75,9 +111,6 @@
 
 
 @endsection
-
-278538
-
 
 @section('scripts') 
 
@@ -96,7 +129,6 @@
                     $("form").trigger("reset");
                     $('#prognoteim').modal('hide');
                     alert("Data Saved");
-                
                 },
                 error: function(error){
                     console.log(error)

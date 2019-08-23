@@ -48,10 +48,10 @@ class ProgressnotesController extends Controller
     //          return view('prognote.single',compact('res'));
     // }
 
-    public function index($id){
+    // public function index($id){
        
-        return view('progressnotes.index');
-    }
+    //     return view('progressnotes.index');
+    // }
 
     public function store(Request $req)
     {
@@ -65,7 +65,6 @@ class ProgressnotesController extends Controller
             'Plans' => $req->Plans,
             'Orders' => $req->Orders,
             'PxOutcome' => $req->PxOutcome
-
         );
         $transac = array(
             'TransType' => $req->TransType,
@@ -73,7 +72,6 @@ class ProgressnotesController extends Controller
             'EncodedBy' => $req->EncodedBy,
             'Healthno' => $req->Healthno,
             'Status' => $req->Status
-           
         );
         Transaction::create($transac);
         ProgressNotes::create($prognote);        

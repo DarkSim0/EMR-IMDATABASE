@@ -41,7 +41,9 @@ Route::get('/admissions/select/{id}','AdmissionController@selectForm');
 
 Route::get('/IM/{id}','InterMedController@index');
 
+Route::get('/IM/admittinghistory/{id}','InterMedController@admittingHistory');
+
+Route::post('/IM/admittinghistory/{id}','InterMedController@storeAdmit');
+
 Route::post('/progStore', ['as' => 'store.note', 'uses' => 'ProgressnotesController@store']);
-
-
 
