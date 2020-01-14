@@ -7,14 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>IM-Database</title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="{{asset('vendor/iconfonts/mdi/css/materialdesignicons.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/css/materialdesignicons.min.css')}}">
   <link rel="stylesheet" href="{{asset('vendor/css/vendor.bundle.base.css')}}">
   <link rel="stylesheet" href="{{asset('vendor/css/vendor.bundle.addons.css')}}">
-  <link rel="stylesheet" href="{{asset('vendor/iconfonts/font-awesome/css/font-awesome.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/css/fontawesome-free/css/all.css')}}">
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
+  
   <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" />
@@ -889,8 +890,8 @@
   <!-- container-scroller -->
 
   <!-- plugins:js -->
-  <script src="{{asset('vendor/js/vendor.bundle.base.js')}}"></script>
-  <script src="{{asset('vendor/js/vendor.bundle.addons.js')}}"></script>
+  <script src="{{asset('assets/js/vendor.bundle.base.js')}}"></script>
+  <script src="{{asset('assets/js/vendor.bundle.addons.js')}}"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->
   <!-- End plugin js for this page-->
