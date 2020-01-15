@@ -28,14 +28,14 @@
 
 
 
-<div class="col-lg-12 grid-margin stretch-card">
+<div class="row">
 
-	<div class="card">
+	<div class="col-md-6">
 
-		<div class="card-body">
-			
-			<h4 class="card-title text-info">Admissions</h4>
-
+		<div class="box">
+			<div class="box-header with-border">
+				<h4 class="card-title text-info">Admissions</h4>
+			</div>
 			<form method="get">
 				
 				<div class="input-group">
@@ -48,7 +48,7 @@
 			</form>
 			    
 			
-			<div class="table-responsive">
+			<div class="box-body">
 
 					<div class="form-group" style="margin-top: 20px; " >
 						@if($errors->any())
@@ -56,7 +56,7 @@
 						@endif
 					</div>		
 				
-				<table class="table table-stripped">
+				<table class="table table-bordered">
 					
 					<thead>
 						

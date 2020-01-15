@@ -29,7 +29,7 @@
               <form action="{{ url('/login') }}" method="POST" role="form">
                  {{ csrf_field() }}
                 <div class="form-group">
-                  <label class="label">Usernamessss</label>
+                  <label class="label">Username</label>
                   <div class="input-group{{ $errors->has('uname') ? ' has-error' : '' }}">
                     <input type="text" class="form-control" name="uname" value="{{ old('uname') }}" placeholder="Username">
                     <div class="input-group-append">

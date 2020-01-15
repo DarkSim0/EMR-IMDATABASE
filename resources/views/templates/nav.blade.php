@@ -1,176 +1,263 @@
+<header class="main-header">
+    <!-- Logo -->
+    <a href="../../index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>A</b>LT</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Admin</b>LTE</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
 
-<nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="{{url('/')}}">
-          <img src="{{asset('assets/images/logo.svg')}}" alt="logo" />
-        </a>
-        <a class="navbar-brand brand-logo-mini" href="../../index.html">
-          <img src="{{asset('assets/images/logo-mini.svg')}}" alt="logo" />
-        </a>
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-center">
-        <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
-          <li class="nav-item">
-            <a href="#" class="nav-link">Schedule
-              <span class="badge badge-primary ml-1">New</span>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-success">4</span>
             </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 4 messages</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Support Team
+                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="../../dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        AdminLTE Design Team
+                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="../../dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Developers
+                        <small><i class="fa fa-clock-o"></i> Today</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="../../dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Sales Department
+                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="{{asset('assets3/dist/img/user4-128x128.jpg')}}" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Reviewers
+                        <small><i class="fa fa-clock-o"></i> 2 days</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">See All Messages</a></li>
+            </ul>
           </li>
-          <li class="nav-item active">
-            <a href="#" class="nav-link">
-              <i class="mdi mdi-elevation-rise"></i>Reports</a>
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">10</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 10 notifications</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                      page and may cause design problems
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-red"></i> 5 new members joined
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-user text-red"></i> You changed your username
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="mdi mdi-bookmark-plus-outline"></i>Score</a>
+          <!-- Tasks: style can be found in dropdown.less -->
+          <li class="dropdown tasks-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o"></i>
+              <span class="label label-danger">9</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 9 tasks</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Design some buttons
+                        <small class="pull-right">20%</small>
+                      </h3>
+                      <div class="progress progress-xs">
+                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">20% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Create a nice theme
+                        <small class="pull-right">40%</small>
+                      </h3>
+                      <div class="progress progress-xs">
+                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">40% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Some task I need to do
+                        <small class="pull-right">60%</small>
+                      </h3>
+                      <div class="progress progress-xs">
+                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">60% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Make beautiful transitions
+                        <small class="pull-right">80%</small>
+                      </h3>
+                      <div class="progress progress-xs">
+                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">80% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                </ul>
+              </li>
+              <li class="footer">
+                <a href="#">View all tasks</a>
+              </li>
+            </ul>
+          </li>
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Alexander Pierce</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Followers</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Sales</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Friends</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
           </li>
         </ul>
-        <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-              <i class="mdi mdi-file-document-box"></i>
-              <span class="count">7</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
-              <div class="dropdown-item">
-                <p class="mb-0 font-weight-normal float-left">You have 7 unread mails
-                </p>
-                <span class="badge badge-info badge-pill float-right">View all</span>
-              </div>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <img src="{{asset('assets/images/faces/face4.jpg')}}" alt="image" class="profile-pic">
-                </div>
-                <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium text-dark">David Grey
-                    <span class="float-right font-weight-light small-text">1 Minutes ago</span>
-                  </h6>
-                  <p class="font-weight-light small-text">
-                    The meeting is cancelled
-                  </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <img src="{{asset('assets/images/faces/face2.jpg')}}" alt="image" class="profile-pic">
-                </div>
-                <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium text-dark">Tim Cook
-                    <span class="float-right font-weight-light small-text">15 Minutes ago</span>
-                  </h6>
-                  <p class="font-weight-light small-text">
-                    New product launch
-                  </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <img src="../../images/faces/face3.jpg" alt="image" class="profile-pic">
-                </div>
-                <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium text-dark"> Johnson
-                    <span class="float-right font-weight-light small-text">18 Minutes ago</span>
-                  </h6>
-                  <p class="font-weight-light small-text">
-                    Upcoming board meeting
-                  </p>
-                </div>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-              <i class="mdi mdi-bell"></i>
-              <span class="count">4</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-              <a class="dropdown-item">
-                <p class="mb-0 font-weight-normal float-left">You have 4 new notifications
-                </p>
-                <span class="badge badge-pill badge-warning float-right">View all</span>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-success">
-                    <i class="mdi mdi-alert-circle-outline mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-medium text-dark">Application Error</h6>
-                  <p class="font-weight-light small-text">
-                    Just now
-                  </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-warning">
-                    <i class="mdi mdi-comment-text-outline mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-medium text-dark">Settings</h6>
-                  <p class="font-weight-light small-text">
-                    Private message
-                  </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-info">
-                    <i class="mdi mdi-email-outline mx-0"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-medium text-dark">New user registration</h6>
-                  <p class="font-weight-light small-text">
-                    2 days ago
-                  </p>
-                </div>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item dropdown d-none d-xl-inline-block">
-            <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-              <span class="profile-text">{{Auth::user()->name}}</span>
-              <img class="img-xs rounded-circle" src="{{asset('assets/images/faces/face1.jpg')}}" alt="Profile image">
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-              <a class="dropdown-item p-0">
-                <div class="d-flex border-bottom">
-                  <div class="py-3 px-4 d-flex align-items-center justify-content-center">
-                    <i class="mdi mdi-bookmark-plus-outline mr-0 text-gray"></i>
-                  </div>
-                  <div class="py-3 px-4 d-flex align-items-center justify-content-center border-left border-right">
-                    <i class="mdi mdi-account-outline mr-0 text-gray"></i>
-                  </div>
-                  <div class="py-3 px-4 d-flex align-items-center justify-content-center">
-                    <i class="mdi mdi-alarm-check mr-0 text-gray"></i>
-                  </div>
-                </div>
-              </a>
-              <a class="dropdown-item mt-2">
-                Manage Accounts
-              </a>
-              <a class="dropdown-item">
-                Change Password
-              </a>
-              <a class="dropdown-item">
-                Check Inbox
-              </a>
-              <a href="{{ url('/logout') }}" class="dropdown-item">
-                Sign Out
-              </a>
-            </div>
-          </li>
-        </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-          <span class="mdi mdi-menu"></span>
-        </button>
       </div>
     </nav>
+  </header>
