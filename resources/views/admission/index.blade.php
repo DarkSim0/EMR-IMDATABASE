@@ -37,6 +37,7 @@
 			<div class="box-header">
 				<h4 class="card-title text-info">Admissions</h4>
 			</div>
+			
 			<div class="col-md-3">
 				<div class="form-group">
 				<form method="get">
