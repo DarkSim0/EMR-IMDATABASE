@@ -1,6 +1,6 @@
 @extends('templates.main')
 
-@section('title', '| Admissions')
+@section('title', 'Admissions')
 
 @section('navbar')
 
@@ -30,22 +30,29 @@
 
 <div class="row">
 
-	<div class="col-md-6">
+	<div class="col-md-12">
 
 		<div class="box">
-			<div class="box-header with-border">
+
+			<div class="box-header">
 				<h4 class="card-title text-info">Admissions</h4>
 			</div>
-			<form method="get">
-				
-				<div class="input-group">
-                    <input type="text" class="form-control" name="search" value="{{isset($search) ? $search: ''}}" placeholder="Search Patient" autocomplete="off" >
-                    <span class="input-group-append" >	
-						<button type="submit" class="btn btn-info" > Search	</button>
-                    </span>
-				</div>
+			<div class="col-md-3">
+				<div class="form-group">
+				<form method="get">
+					
+					<div class="input-group">
+						<input type="text" class="form-control" name="search" value="{{isset($search) ? $search: ''}}" placeholder="Search Patient" autocomplete="off" >
+						<span class="input-group-btn" >	
+							<button type="submit" class="btn btn-info" > Search	</button>
+						</span>
+					</div>
 
-			</form>
+				</form>
+				</div>
+				
+			</div>
+			
 			    
 			
 			<div class="box-body">

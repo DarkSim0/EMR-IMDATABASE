@@ -48,7 +48,7 @@
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Tables</a></li>
-        <li class="active">Simple</li>
+        <li class="active">@yield('title')</li>
       </ol>
     </section>
         <section class="content">

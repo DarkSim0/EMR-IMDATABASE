@@ -1,6 +1,6 @@
 @extends('templates.main')
 
-@section('title', '| Admissions')
+@section('title', 'Patient Search')
 
 @section('navbar')
 
@@ -10,15 +10,16 @@
 
 @section('content')
 
-<div class="col-lg-12 grid-margin stretch-card">
+<div class="row">
 	
-	<div class="card">
+	<div class="col-md-12">
 	
-		<div class="card-body">
+		<div class="box">
+			<div class="box-header">
+				<h4 class="card-title" >Search Patient</h4>
+			</div>
 			
-			<h4 class="card-title" >Search Patient</h4>
-
-			<div class="row">
+			<div class="box-body">
 
 				<div class="col-md-3">
 					
@@ -29,7 +30,7 @@
 								
 								<div class="input-group">
 				                    <input type="text" class="form-control" name="search" value="{{isset($search) ? $search: ''}}" placeholder="Search Patient" autocomplete="off" >
-				                    <span class="input-group-append" >	
+				                    <span class="input-group-btn" >	
 										<button type="submit" class="btn btn-info" > Search	</button>
 				                    </span>
 								</div>
@@ -39,8 +40,8 @@
 					</div>
 
 				</div>	
-
-							<table class="table table-stripped">
+				
+				<table class="table table-bordered">
 					
 					<thead>
 						
