@@ -7,108 +7,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>IM-Database</title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="{{ asset('vendor/iconfonts/mdi/css/materialdesignicons.min.css')}}">
-  <link rel="stylesheet" href="{{ asset('vendor/css/vendor.bundle.base.css')}}">
-  <link rel="stylesheet" href="{{ asset('vendor/css/vendor.bundle.addons.css')}}">
-  <!-- endinject -->
-  <!-- plugin css for this page -->
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-  <!-- endinject -->
-  <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" />
+  
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="{{asset('assets3/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{{asset('assets3/bower_components/font-awesome/css/font-awesome.min.css')}}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="{{asset('assets3/bower_components/Ionicons/css/ionicons.min.css')}}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{asset('assets3/dist/css/AdminLTE.min.css')}}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{{asset('assets3/plugins/iCheck/square/blue.css')}}">
 </head>
 
-<body>
-  <div class="container-scroller">
-    <div class="container-fluid page-body-wrapper full-page-wrapper auth-page">
-      <div class="content-wrapper d-flex align-items-center auth auth-bg-1 theme-one">
-        <div class="row w-100">
-          <div class="col-lg-4 mx-auto">
-            <div class="auto-form-wrapper">
-              <form action="{{ url('/login') }}" method="POST" role="form">
-                 {{ csrf_field() }}
-                <div class="form-group">
-                  <label class="label">Username</label>
-                  <div class="input-group{{ $errors->has('uname') ? ' has-error' : '' }}">
-                    <input type="text" class="form-control" name="uname" value="{{ old('uname') }}" placeholder="Username">
-                    <div class="input-group-append">
-                      <span class="input-group-text">
-                        <i class="mdi mdi-check-circle-outline"></i>
-                      </span>
-                    </div>
-                  </div>
-                    @if ($errors->has('uname'))
-                        <div style="margin-top: 20px;">
-                            <p class="text-danger">{{ $errors->first('uname') }}</p>
-                        </div>
-                    @endif
-                </div>
-                <div class="form-group">
-                  <label class="label">Password</label>
-                  <div class="input-group">
-                    <input type="password" class="form-control" name="password" placeholder="*********">
-                    <div class="input-group-append">
-                      <span class="input-group-text">
-                        <i class="mdi mdi-check-circle-outline"></i>
-                      </span>
-                    </div>
-                  </div>
-                     @if ($errors->has('password'))
-                        <div style="margin-top: 20px;">
-                            <p class="text-danger">{{ $errors->first('password') }}</p>
-                        </div>
-                    @endif
-                </div>
-                <div class="form-group">
-                  <button class="btn btn-primary submit-btn btn-block">Login</button>
-                </div>
-                <div class="form-group d-flex justify-content-between">
-                  <div class="form-check form-check-flat mt-0">
-                    <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input" checked> Keep me signed in
-                    </label>
-                  </div>
-                  <a href="{{ url('/password/reset') }}" class="text-small forgot-password text-black">Forgot Password</a>
-                </div>
-              <!--   <div class="form-group">
-                  <button class="btn btn-block g-login">
-                    <img class="mr-3" src="../../images/file-icons/icon-google.svg" alt="">Log in with Google</button>
-                </div> -->
-                <div class="text-block text-center my-3">
-                  <span class="text-small font-weight-semibold">Not a member ?</span>
-                  <a href="register.html" class="text-black text-small">Create new account</a>
-                </div>
-              </form>
-            </div>
-            <ul class="auth-footer">
-              <li>
-                <a href="#">Conditions</a>
-              </li>
-              <li>
-                <a href="#">Help</a>
-              </li>
-              <li>
-                <a href="#">Terms</a>
-              </li>
-            </ul>
-            <p class="footer-text text-center">copyright © 2018 ManSim. All rights reserved.</p>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <a href="../../index2.html"><b>IM</b>DATABASE</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">Welcome User</p>
+    {{ csrf_field() }}
+    <form action="{{url('/login')}}" method="post">
+      <div class="form-group has-feedback {{ $errors->has('uname') ? ' has-error' : '' }}">
+        <input type="text" value="{{ old('uname') }}" name="uname" class="form-control" placeholder="Username">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      @if ($errors->has('uname'))
+        <div style="margin-top: 20px;">
+            <p class="text-danger">{{ $errors->first('uname') }}</p>
+        </div>
+      @endif
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" name="password" placeholder="Password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      @if ($errors->has('password'))
+        <div style="margin-top: 20px;">
+            <p class="text-danger">{{ $errors->first('password') }}</p>
+        </div>
+      @endif
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label>
+              <input type="checkbox"> Remember Me
+            </label>
           </div>
         </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button class="btn btn-primary btn-block btn-flat">Sign In</button>
+        </div>
+        <!-- /.col -->
       </div>
-      <!-- content-wrapper ends -->
+    </form>
+
+    <!--div class="social-auth-links text-center">
+      <p>- OR -</p>
+      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
+        Facebook</a>
+      <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
+        Google+</a>
     </div>
-    <!-- page-body-wrapper ends -->
+    < /.social-auth-links -->
+
+    <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
+    <a href="register.html" class="text-center">Register a new membership</a>
+
   </div>
-  <!-- container-scroller -->
-  <!-- plugins:js -->
-  <script src="{{asset('vendor/js/vendor.bundle.base.js')}}"></script>
-  <script src="{{asset('vendor/js/vendor.bundle.addons.js')}}"></script>
-  <!-- endinject -->
-  <!-- inject:js -->
-  <script src="{{asset('assets/js/off-canvas.js')}}"></script>
-  <script src="{{asset('assets/js/misc.js')}}"></script>
-  <!-- endinject -->
+  <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery 3 -->
+<script src="{{asset('assets3/bower_components/jquery/dist/jquery.min.js')}}"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="{{asset('assets3/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<!-- iCheck -->
+<script src="{{asset('assets3/plugins/iCheck/icheck.min.js')}}"></script>
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' /* optional */
+    });
+  });
+</script>
+
+
 </body>
 
 </html>
