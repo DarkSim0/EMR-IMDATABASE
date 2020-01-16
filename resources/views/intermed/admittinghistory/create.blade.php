@@ -84,7 +84,7 @@
 			<div class="box">
 				<div class="box-body">		
 					<div class="form-group ">
-						<label class="col-form-label col-sm-3 text-info">III. Past Medical History</label>
+						<label class="col-form-label col-sm-4 text-info">III. Past Medical History</label>
 						<div class="col-sm-4">
 							 <div class="form-radio">
 		                      <label class="form-check-label">
@@ -130,7 +130,7 @@
 			<div class="box">
 				<div class="box-body">
 					<div class="form-group">
-						<label class="col-form-label col-sm-3 text-info">IV. Past Surgical History</label>
+						<label class="col-form-label col-sm-4 text-info">IV. Past Surgical History</label>
 						<div class="col-sm-4">
 							<div class="form-radio">
 			                      <label class="form-check-label">
@@ -211,7 +211,7 @@
 			<div class="box">
 				<div class="box-body">		
 					<div class="form-group">
-						<label class="col-form-label col-sm-3 text-info">V. Personal and Social History</label>
+						<label class="col-form-label col-sm-4 text-info">V. Personal and Social History</label>
 						<div class="col-sm-4">
 							 <div class="form-radio">
 		                      <label class="form-check-label">
@@ -685,7 +685,7 @@
 				</div>
 				<div class="form-group">
 					<label class=" col-md-3">General Survey</label>
-					
+
 					<div class="form-check form-check-flat">
                         <label class="form-check-label">
                           <input type="checkbox" name="peGenSurvey[]" value="awakealert" class="form-check-input"> Awaker & Alert &nbsp
@@ -1217,8 +1217,8 @@
 </div>
 
 <div class="col-md-12 grid-margin ">
-	<div class="card">
-		<div class="card-body">		
+	<div class="box box-info">
+		<div class="box-body">		
 			<div class="form-group row">
 				<label class="col-form-label col-sm-3 text-primary">Neurological Examination</label>
 				<div class="col-sm-4">
@@ -1364,9 +1364,9 @@
 <div class="col-md-12 grid-margin ">
 	<div class="row">
 		<div class="col-md-6 d-flex grid-margin align-items-stretch">
-			<div class="card">
-				<div class="card-body">		
-					<div class="form-group row">
+			<div class="box">
+				<div class="box-body">		
+					<div class="form-group ">
 						<label class="col-form-label col-sm-6 text-primary" style="margin-right: 80px" >MOTOR</label>
 						<a href="" class="btn btn-rounded btn-warning btn-fw" style="margin-right: 20px;" >Auto Fill</a>
 						<a href="" class="btn btn-rounded btn-inverse-secondary btn-fw" >Clear</a>
@@ -1460,9 +1460,9 @@
 			</div>
 		</div>
 		<div class="col-md-6 grid-margin stretch-card">
-			<div class="card">
-				<div class="card-body">		
-					<div class="form-group row">
+			<div class="box">
+				<div class="box-body">		
+					<div class="form-group">
 						<label class="col-form-label col-sm-6 text-primary" style="margin-right: 80px" >SENSORY</label>
 						<a href="" class="btn btn-rounded btn-warning btn-fw" style="margin-right: 20px;" >Auto Fill</a>
 						<a href="" class="btn btn-rounded btn-inverse-secondary btn-fw" >Clear</a>
@@ -1528,12 +1528,12 @@
 	</div>
 </div>
 
-<div class="col-md-12 grid-margin " style="margin-top: -20px;">
+<div class="col-md-12 grid-margin">
 	<div class="row">
 		<div class="col-md-6 grid-margin stretch-card">
-			<div class="card">
-				<div class="card-body">		
-					<div class="form-group row">
+			<div class="box">
+				<div class="box-body">		
+					<div class="form-group">
 						<label class="col-form-label col-sm-6 text-primary" >IX. Admitting Impression</label>
 						<textarea name="admittingImpression" class="form-control"  cols="30" rows="10"></textarea>
 						   
@@ -1542,9 +1542,9 @@
 			</div>
 		</div>
 		<div class="col-md-6 grid-margin stretch-card">
-			<div class="card">
-				<div class="card-body">		
-					<div class="form-group row">
+			<div class="box">
+				<div class="box-body">		
+					<div class="form-group">
 						<label class="col-form-label col-sm-6 text-primary"  >X. Plans</label>
 						<textarea name="plans" class="form-control" cols="30" rows="10"></textarea>
 					</div>
@@ -1559,8 +1559,8 @@
 
 <div class="col-md-12 grid-margin">
 
-	<button type="submit" class="btn btn-outline-primary btn-fw" ><i class="mdi mdi-file-document" ></i>Submit</button>
-	<button type="" class="btn btn-outline-success btn-fw" ><i class="mdi mdi-printer" ></i>Print</button>
+	<button type="submit" class="btn btn-primary btn-fw" ><i class="mdi mdi-file-document" ></i>Submit</button>
+	<button type="" class="btn btn-success btn-fw" ><i class="mdi mdi-printer" ></i>Print</button>
 </div>
 
 
