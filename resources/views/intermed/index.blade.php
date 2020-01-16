@@ -12,11 +12,11 @@
 
 <div class="row">
     
-    <div class="col-lg-4 d-flex align-items-stretch stretch-card grid-margin">
-        <div class="card">
-            <div class="card-body">
+    <div class="col-md-4 d-flex align-items-stretch stretch-card grid-margin">
+        <div class="box box-primary">
+            <div class="box-body">
                 <div class="form-group col-md-12" >
-                    <p class="card-title">Hospital no: <span class="text-success" >{{$patient->Hospnum}}</span> </p>
+                    <p class="box-header">Hospital no: <span class="text-success" >{{$patient->Hospnum}}</span> </p>
                     <label>Name: <span class="card-title" >{{$patient->lname}}, {{$patient->fname}} {{$patient->mname}}</span></label> <br>
                     <label>Gender: @if($patient->sex == 'Male')<span class="text-primary" >{{$patient->sex}}</span>@else <span style="color:#ff66d9;" >{{$patient->sex}}</span> @endif </label> <br>
                     <label>Birthdate: {{$patient->birthdate}}</label><br>

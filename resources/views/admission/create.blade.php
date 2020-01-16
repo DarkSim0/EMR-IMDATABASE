@@ -1,6 +1,6 @@
 @extends('templates.main')
 
-@section('title', '| Admissions')
+@section('title', 'Create Admitting History')
 
 @section('navbar')
 
@@ -25,11 +25,11 @@
     </div>
 @endif
 
-<div class="col-lg-12 grid-margin stretch-card">
+<div class="row">
 	
-		<div class="card">
+		<div class="col-md-12">
 		
-			<div class="card-body">
+			<div class="box">
 				
 				<h4 class="card-title" >Admit New Patient</h4>
 

@@ -1,6 +1,6 @@
 @extends('templates.main')
 
-@section('title', '| Select')
+@section('title', 'Patient Demographics')
 
 @section('navbar')
 

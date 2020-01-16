@@ -113,7 +113,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+            <li class="active"><a href="simple.html"><i class="fa fa-circle-o"></i></a></li>
             <li><a href="data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
           </ul>
         </li>

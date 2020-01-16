@@ -1,6 +1,6 @@
 @extends('templates.main')
 
-@section('title', '| Patient-Info')
+@section('title', 'Admitting History')
 
 @section('navbar')
 

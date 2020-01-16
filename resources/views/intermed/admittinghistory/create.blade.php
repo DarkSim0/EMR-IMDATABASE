@@ -1,6 +1,6 @@
 @extends('templates.main')
 
-@section('title', '| Patient-Info')
+@section('title', 'Admitting History')
 
 @section('navbar')
 
@@ -14,9 +14,9 @@
             <p class="text-danger">This admitting history already exist</p>
         </div>
  	 @endif
-<div class="col-lg-12 grid-margin stretch-card">
-	<div class="card">
-		<div class="card-body">
+<div class="col-md-12 grid-margin stretch-card">
+	<div class="">
+		<div class="box-body">
 			<h3 class=" text-primary">Admitting History and Physical Examination </h3>
 		</div>
 		@include('templates.demograph')
@@ -26,8 +26,8 @@
 	{{csrf_field()}}
 	
 <div class="col-lg-12 grid-margin stretch-card" >
-	<div class="card">
-			<div class="card-body">
+	<div class="box box-info">
+			<div class="box-body">
 			<div class="row">
 				<div class="col-md-6">
 					<p class="card-description" >Date Admitted</p>
@@ -51,11 +51,11 @@
 
 <div class="col-lg-12 grid-margin stretch-card">
 	
-	<div class="card">
+	<div class="box">
 		
-		<div class="card-body">
+		<div class="box-body">
 			
-			<div class="form-group row">
+			<div class="form-group">
 			
 				<label class="col-sm-3 col-form-label text-info"> I. Chief Complaint:</label>
 				<div class="col-sm-9">
@@ -64,7 +64,7 @@
                 </div>
             </div>
             
-			<div class="form-group row">
+			<div class="form-group">
 				
 				<p class="col-sm-3 text-info" >II. History of Present Illness</p>
 				<textarea name="historyPresentIllness" class="form-control" placeholder="History of present illness of a patient..." ="" cols="30" rows="10"></textarea>
@@ -81,9 +81,9 @@
 <div class="col-md-12">
 	<div class="row">
 		<div class="col-md-6 d-flex grid-margin align-items-stretch">
-			<div class="card">
-				<div class="card-body">		
-					<div class="form-group row">
+			<div class="box">
+				<div class="box-body">		
+					<div class="form-group ">
 						<label class="col-form-label col-sm-3 text-info">III. Past Medical History</label>
 						<div class="col-sm-4">
 							 <div class="form-radio">
@@ -127,9 +127,9 @@
 			</div>
 		</div>
 		<div class="col-md-6 grid-margin stretch-card">	
-			<div class="card">
-				<div class="card-body">
-					<div class="form-group row">
+			<div class="box">
+				<div class="box-body">
+					<div class="form-group">
 						<label class="col-form-label col-sm-3 text-info">IV. Past Surgical History</label>
 						<div class="col-sm-4">
 							<div class="form-radio">
@@ -164,10 +164,10 @@
 		                  	<textarea name="pastSurgicalHistoryOther" class="form-control" cols="30" rows="10" placeholder="Others.." ></textarea>
 						</div>
                     </div>
-                    @if($patient->sex == 'Male')
+                    @if($patient->sex == 'Male' || $patient->age >= 12 )
                         <input type="hidden" value="Unremarkable" name="gyneremark" >
                     @else
-					<div class="form-group row">
+					<div class="form-group">
 						<label class="col-form-label col-sm-3">OB-Gyne History</label>
 						<div class="col-sm-4">
 							<div class="form-radio">
@@ -208,9 +208,9 @@
 <div class="col-md-12">
 	<div class="row">
 		<div class="col-md-6 d-flex grid-margin align-items-stretch">
-			<div class="card">
-				<div class="card-body">		
-					<div class="form-group row">
+			<div class="box">
+				<div class="box-body">		
+					<div class="form-group">
 						<label class="col-form-label col-sm-3 text-info">V. Personal and Social History</label>
 						<div class="col-sm-4">
 							 <div class="form-radio">
@@ -254,9 +254,9 @@
 			</div>
 		</div>
 		<div class="col-md-6 grid-margin stretch-card">	
-			<div class="card">
-				<div class="card-body">
-					<div class="form-group row">
+			<div class="box">
+				<div class="box-body">
+					<div class="form-group">
 						<label class="col-form-label col-sm-3 text-info">VI. Family History</label>
 						<div class="col-sm-4">
 							<div class="form-radio">
@@ -303,9 +303,9 @@
 </div>
 <div class="col-lg-12 grid-margin ">
 
-	<div class="card">
+	<div class="box">
 
-		<div class="card-body">
+		<div class="box-body">
 			
 			<div class="form-group">
 				<label class="col-form-label col-sm-3 text-info">VII. System Review</label>
@@ -656,16 +656,17 @@
 </div>	
 <div class="col-lg-12 grid-margin ">
 
-	<div class="card">
+	<div class="box">
 
-		<div class="card-body">
+		<div class="box-body">
 			
 			<div class="form-group">
 				<label class="col-form-label col-sm-3 text-info">VIII. Physical Examination</label>
+				
 				<div class="row">
-					<label class="col-form-label col-sm-3 text-primary"  >Vital Signs</label>	
-				</div>
-				<div class="row">
+					<div class="box-header">
+						<label class="col-form-label col-sm-3 text-primary"  >Vital Signs</label>	
+					</div>
 					<div class="col-md-2">
 						BP<input type="text" name="bp" class="form-control">
 					</div>
@@ -682,8 +683,9 @@
 						BMI<input type="text" name="bmi" class="form-control">
 					</div>
 				</div>
-				<div class="row">
-					<label class="col-form-label col-sm-3">General Survey</label>
+				<div class="form-group">
+					<label class=" col-md-3">General Survey</label>
+					
 					<div class="form-check form-check-flat">
                         <label class="form-check-label">
                           <input type="checkbox" name="peGenSurvey[]" value="awakealert" class="form-check-input"> Awaker & Alert &nbsp
