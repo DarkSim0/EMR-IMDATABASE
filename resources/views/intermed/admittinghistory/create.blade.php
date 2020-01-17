@@ -551,99 +551,99 @@
 				</div>
 				<div class="row">
 					<div class="col-sm-4">
-						<label class="col-form-label col-sm-4 text-primary">Neurological</label>
-						<div class="form-check form-check-flat">
+						<label class="control-label">Neurological</label>
+						<div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="focalwek" class="form-check-input"> Focal Weakness
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="headache" class="form-check-input"> Headache
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="seizur" class="form-check-input"> Seizures
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="dizzis" class="form-check-input"> Dizziness
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="drowsin" class="form-check-input"> Drowsiness
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="loc" class="form-check-input"> LOC
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="numbns" class="form-check-input"> Numbness
 	                        </label>
 		               </div>
 					</div>
 					<div class="col-sm-4">
-						<label class="col-form-label col-sm-4 text-primary">Psychiatric</label>
-						<div class="form-check form-check-flat">
+						<label class="control-label">Psychiatric</label>
+						<div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="depress" class="form-check-input"> Depression
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="anxiety" class="form-check-input"> Anxiety
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="suiciden" class="form-check-input"> Suicidal Ideation
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="homical" class="form-check-input"> Homicidal
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="delun" class="form-check-input"> Delusion
 	                        </label>
 		               </div>
 					</div>
 					<div class="col-sm-4">
-						<label class="col-form-label col-sm-4 text-primary">Pulmonary</label>
-						<div class="form-check form-check-flat">
-	                        <label class="form-check-label">
+						<label class="control-label">Pulmonary</label>
+						<div class="checkbox">
+	                        <label class="checkbox">
 	                          <input type="checkbox" name="systemsReview[]" value="sob" class="form-check-input"> SOB
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="cough" class="form-check-input"> Cough
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="cougdry" class="form-check-input"> Cough dry
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="cougpro" class="form-check-input"> Cough productive
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="wheez" class="form-check-input"> Wheezing
 	                        </label>
 		               </div>
-		               <div class="form-check form-check-flat">
+		               <div class="checkbox">
 	                        <label class="form-check-label">
 	                          <input type="checkbox" name="systemsReview[]" value="hemopt" class="form-check-input"> Hemoptysis
 	                        </label>
@@ -684,24 +684,24 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class=" col-md-3">General Survey</label>
+					<label class="control-label">General Survey</label>
 
-					<div class="form-check form-check-flat">
+					<div class="checkbox">
                         <label class="form-check-label">
                           <input type="checkbox" name="peGenSurvey[]" value="awakealert" class="form-check-input"> Awaker & Alert &nbsp
                         </label>
 		            </div>
-		            <div class="form-check form-check-flat">
+		            <div class="checkbox">
                         <label class="form-check-label">
                           <input type="checkbox" name="peGenSurvey[]" value="cooperative" class="form-check-input"> Cooperative &nbsp
                         </label>
 		            </div>
-		            <div class="form-check form-check-flat">
+		            <div class="checkbox">
                         <label class="form-check-label">
                           <input type="checkbox" name="peGenSurvey[]" value="notinrespiratory" class="form-check-input"> Not in Respiratory Distress &nbsp
                         </label>
 		            </div>
-		            <div class="form-check form-check-flat">
+		            <div class="checkbox">
                         <label class="form-check-label">
                           <input type="checkbox" name="peGenSurvey[]" value="alteredsensor" class="form-check-input"> Altered Sensornium
                         </label>
@@ -1219,7 +1219,7 @@
 <div class="col-md-12 grid-margin ">
 	<div class="box box-info">
 		<div class="box-body">		
-			<div class="form-group row">
+			<div class="form-group ">
 				<label class="col-form-label col-sm-3 text-primary">Neurological Examination</label>
 				<div class="col-sm-4">
 					 <div class="form-radio">
