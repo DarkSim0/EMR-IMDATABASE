@@ -9,7 +9,7 @@ class AdmittingHistory extends Model
    
     protected $table = 'admittinghistory';
 
-    protected $fillable = [
+    protected $fillable = array(
         'admittingHistoryNo',
         'attendingPhysician',
         'dateAdmit',
@@ -95,7 +95,7 @@ class AdmittingHistory extends Model
         'gynepen',
         'gynefour',
         'gyneremark',
-    ];
+    );
 
     public function Admission()
     {

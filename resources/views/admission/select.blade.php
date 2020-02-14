@@ -24,7 +24,7 @@
             <h3 class="text-info">Select Service</h3>   
             <br>
             @foreach($service  as $s)
-                <a href="{{url('/'.$s->Clinic.'/'.$patient->Healthnum)}}" class="btn btn-outline-secondary" >{{$s->Clinic}}</a>           
+                <a href="{{url('/'.$s->Clinic.'/'.$patient->Healthnum)}}" class="btn btn-primary" >{{$s->Clinic}}</a>           
             @endforeach 
         </div>
     </div>
