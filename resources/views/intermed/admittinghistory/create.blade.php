@@ -14,17 +14,17 @@
             <p class="text-danger">This admitting history already exist</p>
         </div>
  	 @endif
-<div class="col-md-12 grid-margin stretch-card">
-	<div class="">
-		<div class="box-body">
-			<h3 class=" text-primary">Admitting History and Physical Examination </h3>
+	<div class="col-md-12 grid-margin stretch-card">
+		<div class="">
+			<div class="box-body">
+				<h3 class=" text-primary">Admitting History and Physical Examination </h3>
+			</div>
+			@include('templates.demograph')
 		</div>
-		@include('templates.demograph')
 	</div>
-</div>
 <form  method="post" >
 	{{csrf_field()}}
-	
+	<input type="hidden" name="admittingHistoryNo" value="{{$patient->Hospnum}}"  >
 <div class="col-lg-12 grid-margin stretch-card" >
 	<div class="box box-info">
 			<div class="box-body">

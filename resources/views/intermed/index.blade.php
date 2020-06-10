@@ -95,6 +95,10 @@
                             <tr>
                                 <td>{{$n->Subjective}}</td>
                                 <td>{{$n->created_at}}</td>
+                                <td>
+                                    <a href="#" class="btn btn-success " id="editbtn">Edit</a>
+                                    <a href="#" class="btn btn-danger" >Delete</a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -113,8 +117,9 @@
 @endsection
 
 @section('scripts') 
-
+{{-- insert ajax --}}
 <script>
+
     $(document).ready(function() {
 
         $('#storenote').on('submit',function(e){
@@ -138,7 +143,17 @@
             });
         });
     });
+
 </script>
+{{-- update ajax --}}
+<script>
+    $(document).ready(function(){
+        $('#editbtn').on
+    });
+
+</script>
+
+
 
 @endsection
 

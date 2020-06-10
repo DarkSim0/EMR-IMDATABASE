@@ -87,8 +87,6 @@ class InterMedController extends Controller
 
     public function storeAdmit(Request $req)
     {
-        
-
 
         $admit = new AdmittingHistory;
         $admit->attendingPhysician = $req->attendingPhysician;
@@ -185,7 +183,7 @@ class InterMedController extends Controller
             'TransTypeName' => "ADMITTING HISTORY",
             'EncodedBy' => $req->EncodedBy,
             'Healthno' => $req->Healthno,
-            'Status' => $req->Status
+            'Status' => "1"
         );
         Transaction::create($transac);
 
