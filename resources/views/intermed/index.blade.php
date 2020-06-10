@@ -96,7 +96,7 @@
                                 <td>{{$n->Subjective}}</td>
                                 <td>{{$n->created_at}}</td>
                                 <td>
-                                    <a href="#" class="btn btn-success " id="editbtn">Edit</a>
+                                    <a href="#" class="btn btn-success " id="editbtn"  >Edit</a>
                                     <a href="#" class="btn btn-danger" >Delete</a>
                                 </td>
                             </tr>
@@ -112,6 +112,7 @@
  
 
 @include('intermed.progressnotes.index')
+@include('intermed.progressnotes.edit')
 
 
 @endsection
@@ -148,7 +149,10 @@
 {{-- update ajax --}}
 <script>
     $(document).ready(function(){
-        $('#editbtn').on
+        $('#editbtn').on('click',function(){
+            $('#prognoteimEdit').modal('show');
+            
+        });
     });
 
 </script>
