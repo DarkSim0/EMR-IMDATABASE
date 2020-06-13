@@ -47,3 +47,4 @@ Route::post('/IM/admittinghistory/{id}','InterMedController@storeAdmit');
 
 Route::post('/progStore', ['as' => 'store.note', 'uses' => 'ProgressnotesController@store']);
 
+Route::put('/progUpdate/{id}',['as' => 'update.note', 'uses' =>'ProgressnotesController@update']);

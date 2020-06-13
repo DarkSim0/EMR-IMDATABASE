@@ -78,4 +78,27 @@ class ProgressnotesController extends Controller
 
     }
 
+    public function update(Request $req, $id){
+        
+        
+        $prognote = ProgressNotes::find($id);
+        $prognote->Subjective = $req->input('Subjective');
+        $prognote->Objectives = $req->input('Objectives');
+        $prognote->Assessment = $req->input('Assessment');
+        $prognote->Plans = $req->input('Plans');
+        $prognote->Orders = $req->input('Orders');
+        $prognote->PxOutcome = $req->input('PxOutcome');
+        $prognote->save();
+
+        $transac = array(
+            'TransType' => $req->TransType,
+            'TransTypeName' => "PROGRESS NOTES",
+            'EncodedBy' => $req->EncodedBy,
+            'Healthno' => $req->Healthno,
+            'Status' => $req->Status
+        );
+        Transaction::create($transac);
+
+    }
+
 }

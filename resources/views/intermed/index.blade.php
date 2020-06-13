@@ -80,26 +80,39 @@
     <div class="col-lg-12 stretch-card grid-margin" >
         <div class="card">
             <div class="card-body">
-                <div class="form-group col-md-12" >
+                <div class="form-group col-md-12 flex" >
                     <label class="card-title">Progress notes </label>
                     <span class="float-right" ><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#prognoteim" >New +</button></span> 
+                    
                     <table class="table" >
                         <thead>
                             <tr>
+                                <td></td>
                                 <th>Subjective</th>
                                 <th>Date Created</th>
+                                <th>Assessment</th>
+                                <th>Plans</th>
+                                <th>Orders</th>
+                                <th>Patient Outcome</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($notes as $n)
                             <tr>
+                                <td >{{$n->TransNo}}</td>
                                 <td>{{$n->Subjective}}</td>
-                                <td>{{$n->created_at}}</td>
+                                <td>{{$n->Objectives}}</td>
+                                <td>{{$n->Assessment}}</td>
+                                <td>{{$n->Plans}}</td>
+                                <td>{{$n->Orders}}</td>
+                                <td>{{$n->PxOutcome}}</td>
                                 <td>
-                                    <a href="#" class="btn btn-success " id="editbtn"  >Edit</a>
+                                 
+                                    <a href="#" class="btn btn-success editbtn" >Edit</a>
                                     <a href="#" class="btn btn-danger" >Delete</a>
                                 </td>
                             </tr>
+                            <input type="hidden" id="TransNo" value="{{$n->TransNo}}"  >
                             @endforeach
                         </tbody>
                     </table>
@@ -149,9 +162,46 @@
 {{-- update ajax --}}
 <script>
     $(document).ready(function(){
-        $('#editbtn').on('click',function(){
+        $('.editbtn').on('click',function(){
             $('#prognoteimEdit').modal('show');
-            
+           
+            $tr = $(this).closest('tr');
+
+            var data = $tr.children("td").map(function(){
+                return $(this).text();
+            }).get();
+
+            console.log(data);
+
+            $('#TransNo').val(data[0]);
+            $('#Subjective').val(data[1]);
+            $('#Objectives').val(data[2]);
+            $('#Assessment').val(data[3]);
+            $('#Plans').val(data[4]);
+            $('#Orders').val(data[5]);
+            $('#PxOutcome').val(data[6]);
+
+        });
+    });
+
+    $('#editnote').on('submit',function(e){
+        e.preventDefault();
+
+        var id = $("#TransNo").val();
+        
+        $.ajax({
+            type: "PUT",
+            url: 'http://localhost/imdatabase/progUpdate/'+id,
+            data: $('#editnote').serialize(),
+            success:function(response){
+                console.log(response);
+                $('#prognoteimEdit').modal('hide');
+                alert("Data Updated");
+                window.location.reload();
+            },
+            error: function(error){
+                console.log(error);
+            }
         });
     });
 

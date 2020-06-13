@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-lg" >
         <div class="modal-content">
          <div class="modal-header">
-             <h4 class="modal-title" >Progress Notes</h4>
+             <h4 class="modal-title" >Update Progress Notes</h4>
              <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
                  <span aria-hidden="true">&times;</span>
              </button>
@@ -13,6 +13,7 @@
                 {{ csrf_field() }}
                 {{ method_field('PUT') }}
                 {{-- retreive data by id --}}
+                  
                 <div class="form-group">
                     <input type="hidden" name="Healthnum" value="{{$patient->Healthnum}}" >
                 </div>
@@ -46,7 +47,7 @@
                 </div>
                 
             </div>
-
+           
             <input type="hidden" name="Healthno" value="{{$patient->Healthnum}}" >
             <input type="hidden" name="EncodedBy" value="{{Auth::user()->uname}}" >
             <input type="hidden" name="TransType" value="2" >
